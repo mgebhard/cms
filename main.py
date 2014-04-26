@@ -17,15 +17,25 @@ def getUser(usr):
 
 class Account(ndb.Model):
     user = ndb.UserProperty(required=True)
-    
-class ArtEvent(ndb.Model):
+
+class Art(ndb.Model):
     src = ndb.StringProperty(required=True)
     title = ndb.StringProperty(required=True)
     artist = ndb.StringProperty(required=True)
-    date = ndb.StringProperty(required=True)
+    exhibit_name = ndb.StringProperty(required=True)
+    date = ndb.DateTimeProperty(required=False)
+    desc = ndb.TextProperty(required=False)
 
-    #Not sure what annotorious returns
-    annotator = ndb.KeyProperty(Account)
+class Annotations(ndb.Model):
+    art_id = ndb.KeyProperty(Account)
+    annotator = ndb.UserProperty(required=True)
+    text = ndb.StringProperty(required=True)
+    date_posted = ndb.DateTimeProperty(required=True)
+    anonymous = ndb.BooleanProperty(required=True)
+    likes = ndb.IntegerProperty(required=False)
+    x_cord = ndb.FloatProperty(required=True)
+    y_cord = ndb.FloatProperty(required=True)
+
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
@@ -39,19 +49,55 @@ class HomeHandler(webapp2.RequestHandler):
             userData.put()
             self.response.out.write(RenderTemplate('home.html', {}))
 
-        # Fetch their annotations
+        # If user exsists fetch their annotations
         usr_annotations = []
-        new_photos = ImageEvent.query().filter(ImageEvent.receiver==userData.key)
-        if new_photos:
-            for photo_instance in new_photos:
-                photo_objects.append(photo_instance)
+        annotations = Annotations.query(annotator==userData.key).fetch()
+        # annotations = Annotations.query().filter(Annotations.annotator==userData.key)
+        if annotations:
+            for note in annotations:
+                usr_annotations.append(note)
 
         self.response.out.write(RenderTemplate('home.html', {'annotationList': usr_annotations}))
 
 
+class ArtHandler(webapp2.RequestHandler):
+    def get_dates(self):
+        blogs = Blog.query()
+        for blog in blogs:
+            every_date[blog.date.month].append(blog.date)
+        for months in every_date.values():
+            months.sort()
+        return every_date
+
+    def get(self, art_id):
+        blog = Art.query().filter(
+            annotations = Annotations.query(annotator==userData.key).date==blog_date).get()
+        if blog:
+            template_values = {'blog': blog,
+                               'private': blog.private,
+                               'every_date': self.get_dates()}
+            template = 'blog.html' 
+        else: 
+            self.error(404)
+            template_values = {}
+            template = 'blog_error.html'
+
+        self.response.out.write(RenderTemplate(template, template_values))
+    
+    def post(self, art_id):
+        date = datetime.strptime(date, '%m.%d.%Y')
+        blog = Blog.query().filter(Blog.date==date).get()
+        if self.request.get('pwd') == 'cseMIT17':
+            private = False
+        else: 
+            private = True
+        template_values = {'blog': blog, 'private': private, 'every_date': self.get_dates()}
+        self.response.out.write(RenderTemplate('blog.html', template_values))
+
+
 routes = [
     ('/', HomeHandler),
-    ('/mfa/*', SendHandler),
+    ('/mfa/(.*)', ArtHandler),
 ]
 
 app = webapp2.WSGIApplication(routes, debug=True)

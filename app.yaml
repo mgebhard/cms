@@ -1,4 +1,4 @@
-application: art-annotator
+application: artannotator
 version: 1
 runtime: python27
 api_version: 1
@@ -14,7 +14,7 @@ handlers:
 - url: /css
   static_dir: css
 
-- url: /pic
+- url: /pictures
   static_dir: pictures
 
 - url: /.*
