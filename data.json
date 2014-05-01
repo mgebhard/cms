@@ -1,0 +1,449 @@
+{
+  "name": "details",
+  "count": 32,
+  "frequency": "daily",
+  "version": 3,
+  "newdata": true,
+  "lastrunstatus": "success",
+  "lastsuccess": "Wed Apr 30 2014 23:31:43 GMT+0000 (UTC)",
+  "nextrun": "Thu May 01 2014 23:31:43 GMT+0000 (UTC)",
+  "results": {
+    "collection1": [
+      {
+        "title": "Carp and Waterweed",
+        "artist": "Shogyo zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Tsukioka%20Settei",
+          "text": "Tsukioka Settei, Japanese, 1710–1786"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Carp and Waterweed",
+          "src": "http://zoom.mfa.org/fif=e/e14797cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Young Woman Wearing a Kimono with Long, Hanging Sleeves",
+        "artist": "Furisode bijin zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Kitao%20Shigemasa",
+          "text": "Kitao Shigemasa, Japanese, 1739–1820"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Young Woman Wearing a Kimono with Long, Hanging Sleeves",
+          "src": "http://zoom.mfa.org/fif=sc1/sc174898.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Client and Courtesan",
+        "artist": "Hyokyaku to yujo",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Artist%20Unknown%2C%20Japanese",
+          "text": "Artist Unknown, Japanese,"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Client and Courtesan",
+          "src": "http://zoom.mfa.org/fif=sc6/sc60636.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Genre Scene of Cherry Blossom Viewing",
+        "artist": "Hanami fuzoku zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Artist%20Unknown%2C%20Japanese",
+          "text": "Artist Unknown, Japanese,"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Genre Scene of Cherry Blossom Viewing",
+          "src": "http://zoom.mfa.org/fif=e/e14801cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Puppet Show",
+        "artist": "Ningyo joruri butai zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Artist%20Unknown%2C%20Japanese",
+          "text": "Artist Unknown, Japanese,"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Puppet Show",
+          "src": "http://zoom.mfa.org/fif=f/f6567.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Courtesan and Client Sharing a Kotatsu",
+        "artist": "Kotatsu no danjo",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Kawashima%20Shigenobu",
+          "text": "Kawashima Shigenobu, Japanese, active about 1716–1744"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Courtesan and Client Sharing a Kotatsu",
+          "src": "http://zoom.mfa.org/fif=f/f3692cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Daikoku with a Courtesan and Child Attendant",
+        "artist": "Daikoku to yujo to kamuro",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Hirose%20Shigenobu",
+          "text": "Hirose Shigenobu, Japanese, active about 1716–1736"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Daikoku with a Courtesan and Child Attendant",
+          "src": "http://zoom.mfa.org/fif=f/f3629cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+     
+      {
+        "title": "The Thirty-six Immortals of Poetry",
+        "artist": "Sanju-rokkasen (-emaki)",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Iwasa%20Matabei",
+          "text": "Attributed to Iwasa Matabei, Japanese, 1578–1650"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "The Thirty-six Immortals of Poetry",
+          "src": "http://zoom.mfa.org/fif=sc2/sc22207.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Partying Beneath Blossoming Cherry Trees",
+        "artist": "Oka yuen zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Artist%20Unknown%2C%20Japanese",
+          "text": "Artist Unknown, Japanese,"
+        },
+        "desc": "No signature.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Partying Beneath Blossoming Cherry Trees",
+          "src": "http://zoom.mfa.org/fif=sc4/sc40801.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Partying Beneath Blossoming Cherry Trees",
+        "artist": "Oka yuen zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Artist%20Unknown%2C%20Japanese",
+          "text": "Artist Unknown, Japanese,"
+        },
+        "desc": "No signature.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Partying Beneath Blossoming Cherry Trees",
+          "src": "http://zoom.mfa.org/fif=sc4/sc40802.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Courtesan and Child Attendant under a Cherry Tree",
+        "artist": "Kaka yujo to kamuro",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunch%C3%B4",
+          "text": "Katsukawa Shunchô, Japanese, active about 1780–1801"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Courtesan and Child Attendant under a Cherry Tree",
+          "src": "http://zoom.mfa.org/fif=f/f3446cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Ko no Moronao Spying on Kaoyo Gozen after her Bath",
+        "artist": "Ko no Moronao Kaoyo Gozen no Nyuyoku wo nozoku zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunch%C3%B4",
+          "text": "Katsukawa Shunchô, Japanese, active about 1780–1801"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Ko no Moronao Spying on Kaoyo Gozen after her Bath",
+          "src": "http://zoom.mfa.org/fif=f/f4993cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Courtesan and Child Attendant",
+        "artist": "Yujo to kamuro zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shungy%C3%B4",
+          "text": "Katsukawa Shungyô, Japanese, active late 18th to early 19th century"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Courtesan and Child Attendant",
+          "src": "http://zoom.mfa.org/fif=f/f3683cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Gathering Shellfish at Low Tide",
+        "artist": "Shiohigari zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shungy%C3%B4",
+          "text": "Katsukawa Shungyô, Japanese, active late 18th to early 19th century"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Gathering Shellfish at Low Tide",
+          "src": "http://zoom.mfa.org/fif=e/e14793cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Woman from Ohara Resting under a Cherry Tree",
+        "artist": "Oka Ohara onna zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunk%C3%B4",
+          "text": "Katsukawa Shunkô, Japanese, 1743–1812"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Woman from Ohara Resting under a Cherry Tree",
+          "src": "http://zoom.mfa.org/fif=f/f3445cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Parody of Takasago",
+        "artist": "Mitate Takasago zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Kubo%20Shunman",
+          "text": "Kubo Shunman, Japanese, 1757–1820"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Parody of Takasago",
+          "src": "http://zoom.mfa.org/fif=sc1/sc174899.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Women at a Fulling Block",
+        "artist": "Kinuta uchi bijin zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Kubo%20Shunman",
+          "text": "Kubo Shunman, Japanese, 1757–1820"
+        },
+        "desc": "Kubo Shunman",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Women at a Fulling Block",
+          "src": "http://zoom.mfa.org/fif=sc1/sc174900.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Woman Preparing the Seven Herbs of Spring",
+        "artist": "Nanakusa no hayashi zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Kubo%20Shunman",
+          "text": "By Kubo Shunman, Japanese, 1757–1820"
+        },
+        "desc": "Shunman",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Woman Preparing the Seven Herbs of Spring",
+          "src": "http://zoom.mfa.org/fif=f/f3439cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Emperor Xuanzong and Yang Guifei",
+        "artist": "Genso Yokihi yuraku zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Kubo%20Shunman",
+          "text": "Kubo Shunman, Japanese, 1757–1820"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Emperor Xuanzong and Yang Guifei",
+          "src": "http://zoom.mfa.org/fif=sc1/sc174901.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Two Courtesans in an Upstairs Room",
+        "artist": "Oujo no ni yujo",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Kubo%20Shunman",
+          "text": "By Kubo Shunman, Japanese, 1757–1820"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Two Courtesans in an Upstairs Room",
+          "src": "http://zoom.mfa.org/fif=e/e14790cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Women Representing the Three Cities (Osaka)",
+        "artist": "Santo bijin zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunrin",
+          "text": "Katsukawa Shunrin, Japanese, active about 1781–1801"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Women Representing the Three Cities (Osaka)",
+          "src": "http://zoom.mfa.org/fif=sc1/sc174902.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Women Representing the Three Cities (Kyoto)",
+        "artist": "Santo bijin zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunrin",
+          "text": "Katsukawa Shunrin, Japanese, active about 1781–1801"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Women Representing the Three Cities (Kyoto)",
+          "src": "http://zoom.mfa.org/fif=sc1/sc174904.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Shakkyo, the Lion Dance",
+        "artist": "Shakkyo",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "Katsukawa Shunsho, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Shakkyo, the Lion Dance",
+          "src": "http://zoom.mfa.org/fif=sc2/sc203617.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Woman Strolling by Iris",
+        "artist": "Kakitsubata ni bijin zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "Katsukawa Shunshô, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Woman Strolling by Iris",
+          "src": "http://zoom.mfa.org/fif=f/f3667cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Parody of Eguchi no kimi",
+        "artist": "Mitate Eguchi no kimi zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "Katsukawa Shunshô, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Parody of Eguchi no kimi",
+          "src": "http://zoom.mfa.org/fif=sc1/sc174908.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Parody of Hanshan (Kanzan) and Shide (Jittoku)",
+        "artist": "Mitate Kanzan Jittoku zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "Katsukawa Shunshô, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Parody of Hanshan (Kanzan) and Shide (Jittoku)",
+          "src": "http://zoom.mfa.org/fif=f/f3662cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Three Women Arranging Flowers",
+        "artist": "Ikebana san bijin zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "Katsukawa Shunshô, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Three Women Arranging Flowers",
+          "src": "http://zoom.mfa.org/fif=f/f3664cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Women Making Dolls",
+        "artist": "Shitsunai yon bijin zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "Attributed to Katsukawa Shunshô, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Women Making Dolls",
+          "src": "http://zoom.mfa.org/fif=f/f3651cr-d1.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Parody of Matsukaze and Murasame",
+        "artist": "Mitate Matsukaze Murasame zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "Katsukawa Shunshô, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Parody of Matsukaze and Murasame",
+          "src": "http://zoom.mfa.org/fif=sc1/sc174910.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Enma, the Lord of the Realm of Death, and his Crystal Mirror",
+        "artist": "Enma Johari kagami zu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "By Katsukawa Shunshô, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Enma, the Lord of the Realm of Death, and his Crystal Mirror",
+          "src": "http://zoom.mfa.org/fif=sc1/sc198350.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      },
+      {
+        "title": "Scenes of Amusement in Spring and Summer",
+        "artist": "Shun'yu ryuin zu byobu",
+        "period": {
+          "href": "http://www.mfa.org/search/collections?artist=Katsukawa%20Shunsh%C3%B4",
+          "text": "Katsukawa Shunshô, Japanese, 1726–1792"
+        },
+        "desc": "By 1911, purchased by William Sturgis Bigelow (b. 1850 - d. 1926), Boston [see note 1]; 1911, gift of Bigelow to the MFA. (Accession Date: August 3, 1911)\nNOTES:\n[1] Much of Bigelow's collection of Asian art was formed during his residence in Japan between 1882 and 1889, although he also made acquisitions in Europe and the United States. Bigelow deposited many of these objects at the MFA in 1890 before donating them to the Museum's collection at later dates.",
+        "exhibit": "Not on view",
+        "image": {
+          "alt": "Scenes of Amusement in Spring and Summer",
+          "src": "http://zoom.mfa.org/fif=sc2/sc216065.fpx&obj=iip,1.0&wid=568&cell=568,427&cvt=jpeg"
+        }
+      }
+    ]
+  }
+}

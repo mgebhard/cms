@@ -2,6 +2,7 @@ import webapp2
 import jinja2
 import urllib2
 import os
+import json
 from google.appengine.ext import ndb
 from google.appengine.api import users
 
@@ -23,8 +24,8 @@ class Art(ndb.Model):
     title = ndb.StringProperty(required=True)
     artist = ndb.StringProperty(required=True)
     exhibit = ndb.StringProperty(required=True)
-    date = ndb.DateTimeProperty(required=False)
-    desc = ndb.TextProperty(required=False)
+    description = ndb.TextProperty(required=False)
+    link = ndb.StringProperty(required=True)
 
 class Annotation(ndb.Model):
     art_id = ndb.KeyProperty(Account)
@@ -36,6 +37,24 @@ class Annotation(ndb.Model):
     x_cord = ndb.FloatProperty(required=True)
     y_cord = ndb.FloatProperty(required=True)
 
+# def dump_data():
+#     with open("data.json") as json_file:
+#         json_data = json.load(json_file)['results']['collection1']
+#     for d in json_data:
+#         src = d['image']['src']
+#         link = d['period']['href']
+#         title = d['title']
+#         artist = d['artist']
+#         ex = d['exhibit']
+#         info = d['desc']
+#         # text = d['period']['text']
+#         new_art = Art(src = src,
+#                         link = link,
+#                         title = title,
+#                         artist = artist,
+#                         exhibit = ex,
+#                         description = info)
+#         new_art.put()
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
@@ -51,8 +70,9 @@ class HomeHandler(webapp2.RequestHandler):
 
         # If user exsists fetch their annotation
         usr_annotation = []
-        annotations = Annotation.query(annotator==userData.key).fetch()
-        # annotation = Annotation.query().filter(Annotation.annotator==userData.key)
+        annotations = Annotation.query(Annotation.annotator==userData.key).fetch()
+        
+        annotation = Annotation.query().filter(Annotation.annotator==userData)
         if annotations:
             for note in annotations:
                 usr_annotation.append(note)
