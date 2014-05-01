@@ -70,9 +70,9 @@ class HomeHandler(webapp2.RequestHandler):
 
         # If user exsists fetch their annotation
         usr_annotation = []
-        annotations = Annotation.query(Annotation.annotator==userData.key).fetch()
+        annotations = Annotation.query(Annotation.annotator==users.get_current_user()).fetch()
         
-        annotation = Annotation.query().filter(Annotation.annotator==userData)
+        # annotations = Annotation.query().filter(Annotation.annotator==users.get_current_user())
         if annotations:
             for note in annotations:
                 usr_annotation.append(note)
@@ -89,7 +89,7 @@ class ArtHandler(webapp2.RequestHandler):
             template_values = {'art_src': art.src,
                                'title': art.title,
                                'artist': art.artist,
-                               'exhibit' art.exhibit}
+                               'exhibit': art.exhibit}
             template = 'picture.html' 
         else: 
             self.error(404)
@@ -100,7 +100,7 @@ class ArtHandler(webapp2.RequestHandler):
     
     def post(self, art_id):
         new_annotation = Annotation(art_id=int(art_id), 
-                                    annotator=users.get_current_user().key, 
+                                    annotator=users.get_current_user(), 
                                     )
         new_annotation.put()
         self.redirect('/mfa/%s' % art_id)
