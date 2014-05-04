@@ -3,6 +3,7 @@ import jinja2
 import urllib2
 import os
 import json
+from datetime import datetime
 from google.appengine.ext import ndb
 from google.appengine.api import users
 
@@ -85,22 +86,31 @@ class ArtHandler(webapp2.RequestHandler):
         art_id = int(art_id)
         art = Art.get_by_id(int(art_id))
         annotations = Annotation.query(art_id==art_id).fetch()
-        if blog:
-            template_values = {'art_src': art.src,
-                               'title': art.title,
-                               'artist': art.artist,
-                               'exhibit': art.exhibit}
-            template = 'picture.html' 
-        else: 
-            self.error(404)
-            template_values = {}
-            template = 'error.html'
+        all_annotations = []
+        if annotations:
+            for note in annotations:
+                all_annotations.append(note)
+        
+        template_values = {'art_src': art.src,
+                           'title': art.title,
+                           'artist': art.artist,
+                           'exhibit': art.exhibit,
+                           'link': art.link,
+                           'description': art.description,
+                           'all_annotations': all_annotations}
 
-        self.response.out.write(RenderTemplate(template, template_values))
+        self.response.out.write(RenderTemplate('picture.html' , template_values))
     
     def post(self, art_id):
-        new_annotation = Annotation(art_id=int(art_id), 
-                                    annotator=users.get_current_user(), 
+        art = Art.get_by_id(int(art_id))
+        new_annotation = Annotation(art_id = art, 
+                                    annotator = users.get_current_user(), 
+                                    text = str(self.request.get('text')),
+                                    date_posted = datetime.now(),
+                                    anonymous = bool(self.request.get('annoymous')),
+                                    likes = 0,
+                                    x_cord = float(self.request.get('x')),
+                                    y_cord = float(self.request.get('y'))
                                     )
         new_annotation.put()
         self.redirect('/mfa/%s' % art_id)
