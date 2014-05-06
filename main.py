@@ -7,10 +7,11 @@ from google.appengine.ext import ndb
 from google.appengine.api import users
 
 jinja_environment = jinja2.Environment(loader=
-    jinja2.FileSystemLoader(os.path.dirname(__file__)))
+    jinja2.FileSystemLoader(os.path.dirname(__file__) + "/templates"))
 
 def RenderTemplate(template_name, values):
     template = jinja_environment.get_template(template_name)
+    print template
     return template.render(values)
 
 def getUser(usr):
@@ -28,7 +29,8 @@ class Art(ndb.Model):
     link = ndb.StringProperty(required=True)
 
 class Annotation(ndb.Model):
-    art_id = ndb.KeyProperty(Account)
+    piece = ndb.KeyProperty(kind=Art)
+    user_id = ndb.KeyProperty(kind=Account)
     annotator = ndb.UserProperty(required=True)
     text = ndb.StringProperty(required=True)
     date_posted = ndb.DateTimeProperty(required=True)
@@ -37,24 +39,24 @@ class Annotation(ndb.Model):
     x_cord = ndb.FloatProperty(required=True)
     y_cord = ndb.FloatProperty(required=True)
 
-# def dump_data():
-#     with open("data.json") as json_file:
-#         json_data = json.load(json_file)['results']['collection1']
-#     for d in json_data:
-#         src = d['image']['src']
-#         link = d['period']['href']
-#         title = d['title']
-#         artist = d['artist']
-#         ex = d['exhibit']
-#         info = d['desc']
-#         # text = d['period']['text']
-#         new_art = Art(src = src,
-#                         link = link,
-#                         title = title,
-#                         artist = artist,
-#                         exhibit = ex,
-#                         description = info)
-#         new_art.put()
+def dump_data():
+     with open("data.json") as json_file:
+         json_data = json.load(json_file)['results']['collection1']
+     for d in json_data:
+         src = d['image']['src']
+         link = d['period']['href']
+         title = d['title']
+         artist = d['artist']
+         ex = d['exhibit']
+         info = d['desc']
+         # text = d['period']['text']
+         new_art = Art(src = src,
+                         link = link,
+                         title = title,
+                         artist = artist,
+                         exhibit = ex,
+                         description = info)
+         new_art.put()
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
@@ -71,7 +73,7 @@ class HomeHandler(webapp2.RequestHandler):
         # If user exsists fetch their annotation
         usr_annotation = []
         annotations = Annotation.query(Annotation.annotator==users.get_current_user()).fetch()
-        
+
         # annotations = Annotation.query().filter(Annotation.annotator==users.get_current_user())
         if annotations:
             for note in annotations:
@@ -84,23 +86,26 @@ class ArtHandler(webapp2.RequestHandler):
     def get(self, art_id):
         art_id = int(art_id)
         art = Art.get_by_id(int(art_id))
-        annotations = Annotation.query(art_id==art_id).fetch()
-        if blog:
+
+        if art:
+            annotations = Annotation.query(Annotation.piece == art.key).fetch()
             template_values = {'art_src': art.src,
                                'title': art.title,
                                'artist': art.artist,
-                               'exhibit': art.exhibit}
-            template = 'picture.html' 
-        else: 
+                               'exhibit': art.exhibit,
+                               'desc': art.description,
+                               }
+            template = 'picture.html'
+        else:
             self.error(404)
             template_values = {}
             template = 'error.html'
 
         self.response.out.write(RenderTemplate(template, template_values))
-    
+
     def post(self, art_id):
-        new_annotation = Annotation(art_id=int(art_id), 
-                                    annotator=users.get_current_user(), 
+        new_annotation = Annotation(art_id=int(art_id),
+                                    annotator=users.get_current_user(),
                                     )
         new_annotation.put()
         self.redirect('/mfa/%s' % art_id)

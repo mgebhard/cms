@@ -1,0 +1,126 @@
+{% extends "base.html" %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/forms-min.css">
+<link rel="stylesheet" href="../css/vendor/annotorious.css">
+<link rel="stylesheet" href="../css/picture.css">
+{% endblock %}
+
+{% block header_title %}
+{{ super() }}
+<p class="artist">{{ artist }}</p>
+{% endblock %}
+
+{% block header_button %}
+<button class="pure-skin-red pure-button">Profile</button>
+{% endblock %}
+
+{% block content %}
+<section class="art-info">
+</section>
+<div class="grid image-container">
+  <img class="art-image grid-cell annotatable" src="{{ art_src }}" alt="{{ title }}">
+</div>
+
+<div class="grid bottom-content new-show-buttons">
+  <button class="grid-cell pure-skin-red pure-button pure-button-primary new-comment">New Comment</button>
+  <button class="grid-cell pure-skin-red pure-button show-comments">Show</button>
+  <button class="grid-cell pure-skin-red pure-button hide-comments">Hide</button>
+  <div class="u1-2 show-comment-how">Draw a square to view comments!</div>
+</div>
+
+<div class="grid bottom-content new-comment-div">
+  <div class="grid-cell new-comment-how">Draw a square to make a comment!</div>
+  <button class="grid-cell pure-skin-red pure-button cancel-new">Cancel</button>
+</div>
+
+<div class="grid bottom-content type-comment">
+  <form id="comment-form" class="grid-cell pure-form" data-user-id={{}}>
+    <fieldset>
+      <textarea class="comment-text" rows="3" placeholder="Type a Comment..." required></textarea>
+      <br>
+      <input type="checkbox" class="anon-checkbox"> Anonymous
+      <button class="pure-skin-red pure-button cancel-comment">Cancel</button>
+      <button type="submit" class="pure-skin-red pure-button pure-button-primary">Submit</button>
+    </fieldset>
+  </form>
+</div>
+
+<div class="grid bottom-content show-comment-div">
+  <div class="grid art-comment-header">
+    <div class="u2-3">
+      <h4>Comments at this Location</h4>
+    </div>
+    <div class="u1-3">
+      <button class="pure-skin-red pure-button go-back-btn">Go Back</button>
+    </div>
+  </div>
+  <div class="art-comment grid">
+    <span class="comment-name grid-cell">
+      Evan Moore
+    </span>
+    <span class="comment-time grid-cell">
+      2 min. ago
+    </span>
+
+    <div class="comment-text grid-cell">
+      I like this comment
+    </div>
+  </div>
+
+  <div class="art-comment grid">
+    <span class="comment-name grid-cell">
+      Evan Moore
+    </span>
+    <span class="comment-time grid-cell">
+      2 min. ago
+    </span>
+
+    <div class="comment-text grid-cell">
+      I like this comment
+    </div>
+  </div>
+
+  <div class="art-comment grid">
+    <span class="comment-name grid-cell">
+      Evan Moore
+    </span>
+    <span class="comment-time grid-cell">
+      2 min. ago
+    </span>
+
+    <div class="comment-text grid-cell">
+      I like this comment
+    </div>
+  </div>
+
+  <div class="art-comment grid">
+    <span class="comment-name grid-cell">
+      Evan Moore
+    </span>
+    <span class="comment-time grid-cell">
+      2 min. ago
+    </span>
+
+    <div class="comment-text grid-cell">
+      I like this comment
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+{{ super() }}
+<!--<script type="text/javascript" src="../js/vendor/annotorious.min.js"></script>-->
+<script type="text/javascript" src="../js/vendor/annotorious.min.js"></script>
+<script type="text/javascript" src="../js/vendor/anno-fancybox.min.js"></script>
+<script type="text/javascript" src="../js/anno-mob.js"></script>
+<script type="text/javascript">
+    anno.addPlugin('FancyBoxSelector', { activate: true });
+    anno.addPlugin('MobPlugin', { });
+</script>
+<script type="text/javascript" src="../js/picture.js"></script>
+{% endblock %}
