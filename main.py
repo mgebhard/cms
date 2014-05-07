@@ -137,7 +137,7 @@ class ArtHandler(webapp2.RequestHandler):
         # self.redirect('/mfa/%s' % art_id)
         obj = {
             'success': True,
-            'time_posted': new_annotation.date_posted
+            'time_posted': new_annotation.date_posted.strftime('%m/%d/%Y - %H:%M')
         }
         self.response.set_status(200)
         self.response.headers['Content-Type'] = 'application/json'

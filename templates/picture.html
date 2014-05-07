@@ -69,7 +69,7 @@
       {% endif %}
     </span>
     <span class="comment-time grid-cell">
-      {{annotation.date_posted}}
+      {{annotation.date_posted.strftime('%m/%d/%Y - %H:%M')}}
     </span>
 
     <div class="comment-text grid-cell">
