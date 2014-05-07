@@ -1,7 +1,7 @@
 var NEW_COMMENT;
 
 anno.setProperties({
-    fill: 'red'
+    fill: "rgba(243, 40, 55, 0.69)"
 });
 
 window.blockMenuHeaderScroll = false;
@@ -149,7 +149,7 @@ jQuery(document).ready(function($) {
             newComment.find('.comment-text').text(annotation.text);
             newComment.find('.comment-time').text(data.time_posted);
 
-            $('.art-comment-header').after(newComment);  
+            $('.art-comment-header').after(newComment);
 
 
         }).fail(function(jqxhr) {
