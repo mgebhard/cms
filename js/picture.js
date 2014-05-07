@@ -130,7 +130,7 @@ jQuery(document).ready(function($) {
             art_id: $this.data('art-id')
         }
 
-        var req = $.post('http://localhost:8080/mfa/' + annotation.art_id,
+        var req = $.post('http://artannotator.appspot.com/mfa/' + annotation.art_id,
                          {data: JSON.stringify(annotation)});
 
         req.done(function(data) {
