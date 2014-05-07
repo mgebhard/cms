@@ -17,6 +17,7 @@
 {% endblock %}
 
 {% block content %}
+
 {% for art in artList %}
 <div class="picture-div grid" data-id="{{art.key.id()}}">
   <div class="picture u1-3 grid">
@@ -30,6 +31,13 @@
   </div>
 </div>
 {% endfor %}
+
+{% if artList|length == 0 %}
+<p style="text-align: center;">
+  You haven't annotated anything yet. What are you waiting for?
+</p>
+{% endif %}
+
 {% endblock content %}
 
 {% block scripts %}

@@ -78,6 +78,10 @@
   </div>
   {% endfor %}
 
+  {% if all_annotations|length == 0 %}
+    <p style="text-align: center;"> No annotations yet. Why not make the first?</p>
+  {% endif %}
+
 </div>
 {% endblock %}
 
