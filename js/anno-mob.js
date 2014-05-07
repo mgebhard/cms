@@ -1,5 +1,6 @@
 var ANNOTATOR;
 
+
 annotorious.plugin.MobPlugin = function(opt_config_options) { }
 
 annotorious.plugin.MobPlugin.prototype.initPlugin = function(anno) {
@@ -8,14 +9,24 @@ annotorious.plugin.MobPlugin.prototype.initPlugin = function(anno) {
 
 annotorious.plugin.MobPlugin.prototype.onInitAnnotator = function(annotator) {
     // A Field can be an HTML string or a function(annotation) that returns a string
-    annotator.popup.addField(function(annotation) { 
+    annotator.popup.addField(function(annotation) {
     return '<em>Hello World: ' + annotation.text.length + ' chars</em>'
     });
 
     // Override to not show editor
     annotator.editor.__proto__.open = function() {
-      console.log("no editor for you!");
     }
-    
+    console.log('SETTING ANNOTATOR');
     ANNOTATOR = annotator;
+    //fire event
+    var event = new CustomEvent(
+      "annotatorLoaded",
+      {
+        detail: {
+        },
+        bubbles: true,
+        cancelable: true
+      }
+    );
+    document.dispatchEvent(event);
 }

@@ -24,7 +24,8 @@
     display: none; }
   .new-show-buttons .show-comment-how {
     display: none;
-    flex: 1 1 100%; }
+    flex: 1 1 100%;
+    text-align: center; }
 
 .new-comment-div {
   display: none;
@@ -33,7 +34,8 @@
     right: 20px;
     left: 20px; }
   .new-comment-div .new-comment-how {
-    flex: 1 1 100%; }
+    flex: 1 1 100%;
+    text-align: center; }
   .new-comment-div button {
     max-width: 40%; }
 

@@ -1,3 +1,33 @@
 .page-title {
     font-size: 1.5em;
 }
+
+.picture {
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+.picture-img {
+    max-height: 100px;
+    width: auto;
+}
+
+.picture-div:first-child {
+    border-top: 0px;
+}
+
+.picture-div {
+    border-bottom: 1px solid gray;
+    padding: 10px 0px;
+}
+
+.info {
+    h3 {
+        margin-top: 0px;
+    }
+    p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+}

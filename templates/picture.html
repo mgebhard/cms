@@ -15,7 +15,7 @@
 {% endblock %}
 
 {% block header_button %}
-<button class="pure-skin-red pure-button">Profile</button>
+<a class="pure-skin-red pure-button home-button" href="/">Profile</a>
 {% endblock %}
 
 {% block content %}
@@ -38,11 +38,11 @@
 </div>
 
 <div class="grid bottom-content type-comment">
-  <form id="comment-form" class="grid-cell pure-form" data-user-id={{}}>
+  <form id="comment-form" class="grid-cell pure-form" data-user="{{user}}" data-art-id="{{art_id}}">
     <fieldset>
       <textarea class="comment-text" rows="3" placeholder="Type a Comment..." required></textarea>
       <br>
-      <input type="checkbox" class="anon-checkbox"> Anonymous
+      <input type="checkbox" name="anon" class="anon-checkbox"> Anonymous
       <button class="pure-skin-red pure-button cancel-comment">Cancel</button>
       <button type="submit" class="pure-skin-red pure-button pure-button-primary">Submit</button>
     </fieldset>
@@ -58,69 +58,42 @@
       <button class="pure-skin-red pure-button go-back-btn">Go Back</button>
     </div>
   </div>
-  <div class="art-comment grid">
+
+  {% for annotation in all_annotations %}
+  <div class="art-comment grid" data-user="{{annotation.annotator}}">
     <span class="comment-name grid-cell">
-      Evan Moore
+      {% if annotation.anonymous %}
+        Anonymous
+      {% else %}
+      {{annotation.annotator}}
+      {% endif %}
     </span>
     <span class="comment-time grid-cell">
-      2 min. ago
+      {{annotation.date_posted}}
     </span>
 
     <div class="comment-text grid-cell">
-      I like this comment
+      {{annotation.text}}
     </div>
   </div>
+  {% endfor %}
 
-  <div class="art-comment grid">
-    <span class="comment-name grid-cell">
-      Evan Moore
-    </span>
-    <span class="comment-time grid-cell">
-      2 min. ago
-    </span>
-
-    <div class="comment-text grid-cell">
-      I like this comment
-    </div>
-  </div>
-
-  <div class="art-comment grid">
-    <span class="comment-name grid-cell">
-      Evan Moore
-    </span>
-    <span class="comment-time grid-cell">
-      2 min. ago
-    </span>
-
-    <div class="comment-text grid-cell">
-      I like this comment
-    </div>
-  </div>
-
-  <div class="art-comment grid">
-    <span class="comment-name grid-cell">
-      Evan Moore
-    </span>
-    <span class="comment-time grid-cell">
-      2 min. ago
-    </span>
-
-    <div class="comment-text grid-cell">
-      I like this comment
-    </div>
-  </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
 {{ super() }}
 <!--<script type="text/javascript" src="../js/vendor/annotorious.min.js"></script>-->
-<script type="text/javascript" src="../js/vendor/annotorious.min.js"></script>
+<script type="text/javascript">
+    var annotationsJSON = {{annotations_json}};
+</script>
+<!-- <script type="text/javascript" src="../js/vendor/annotorious.min.js"></script> -->
+<script type="text/javascript" src="../js/vendor/annotorious.test.min.js">
 <script type="text/javascript" src="../js/vendor/anno-fancybox.min.js"></script>
 <script type="text/javascript" src="../js/anno-mob.js"></script>
+<script type="text/javascript" src="../js/picture.js"></script>
 <script type="text/javascript">
     anno.addPlugin('FancyBoxSelector', { activate: true });
     anno.addPlugin('MobPlugin', { });
 </script>
-<script type="text/javascript" src="../js/picture.js"></script>
 {% endblock %}
