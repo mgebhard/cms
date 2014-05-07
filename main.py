@@ -3,6 +3,7 @@ import jinja2
 import urllib2
 import os
 import json
+from datetime import datetime
 from google.appengine.ext import ndb
 from google.appengine.api import users
 
@@ -29,8 +30,7 @@ class Art(ndb.Model):
     link = ndb.StringProperty(required=True)
 
 class Annotation(ndb.Model):
-    piece = ndb.KeyProperty(kind=Art)
-    user_id = ndb.KeyProperty(kind=Account)
+    art_id = ndb.KeyProperty(kind=Art)
     annotator = ndb.UserProperty(required=True)
     text = ndb.StringProperty(required=True)
     date_posted = ndb.DateTimeProperty(required=True)
@@ -38,6 +38,10 @@ class Annotation(ndb.Model):
     likes = ndb.IntegerProperty(required=False)
     x_cord = ndb.FloatProperty(required=True)
     y_cord = ndb.FloatProperty(required=True)
+    width = ndb.FloatProperty(required=True)
+    height = ndb.FloatProperty(required=True)
+    center_x = ndb.FloatProperty(required=True)
+    center_y = ndb.FloatProperty(required=True)
 
 def dump_data():
      with open("data.json") as json_file:
@@ -74,41 +78,78 @@ class HomeHandler(webapp2.RequestHandler):
         usr_annotation = []
         annotations = Annotation.query(Annotation.annotator==users.get_current_user()).fetch()
 
+        art_keys = []
+
         # annotations = Annotation.query().filter(Annotation.annotator==users.get_current_user())
         if annotations:
             for note in annotations:
+                if note.art_id not in art_keys:
+                    art_keys.append(note.art_id)
                 usr_annotation.append(note)
 
-        self.response.out.write(RenderTemplate('home.html', {'annotationList': usr_annotation}))
+        self.response.out.write(RenderTemplate('home.html', {'annotationList': usr_annotation,
+                                                             'artList': [key.get() for key in art_keys]}))
 
 
 class ArtHandler(webapp2.RequestHandler):
     def get(self, art_id):
         art_id = int(art_id)
         art = Art.get_by_id(int(art_id))
+        annotations = Annotation.query(Annotation.art_id==art.key).fetch()
+        all_annotations = []
+        if annotations:
+            for note in annotations:
+                all_annotations.append(note)
 
-        if art:
-            annotations = Annotation.query(Annotation.piece == art.key).fetch()
-            template_values = {'art_src': art.src,
-                               'title': art.title,
-                               'artist': art.artist,
-                               'exhibit': art.exhibit,
-                               'desc': art.description,
-                               }
-            template = 'picture.html'
-        else:
-            self.error(404)
-            template_values = {}
-            template = 'error.html'
+        template_values = {'art_src': art.src,
+                           'title': art.title,
+                           'artist': art.artist,
+                           'exhibit': art.exhibit,
+                           'link': art.link,
+                           'description': art.description,
+                           'all_annotations': all_annotations,
+                           'annotations_json': json.dumps([serializeAnno(x) for x in all_annotations]), #Needed for Javascript function to readd annotations
+                           'user': users.get_current_user(),
+                           'art_id': art_id
+                           }
 
-        self.response.out.write(RenderTemplate(template, template_values))
+        self.response.out.write(RenderTemplate('picture.html' , template_values))
 
     def post(self, art_id):
-        new_annotation = Annotation(art_id=int(art_id),
-                                    annotator=users.get_current_user(),
+        art = Art.get_by_id(int(art_id))
+        data = json.loads(self.request.get('data'))
+        print str(data['shapes'])
+        shape_info = data['shapes'][0]['geometry']
+        new_annotation = Annotation(art_id = art.key,
+                                    annotator = users.get_current_user(),
+                                    text = str(data['text']),
+                                    date_posted = datetime.now(),
+                                    anonymous = bool(data['anonymous']),
+                                    likes = 0,
+                                    x_cord = float(shape_info['x']),
+                                    width = float(shape_info['width']),
+                                    y_cord = float(shape_info['y']),
+                                    height = float(shape_info['height']),
+                                    center_x = float(data['center']['x']),
+                                    center_y = float(data['center']['y'])
                                     )
         new_annotation.put()
-        self.redirect('/mfa/%s' % art_id)
+        # self.redirect('/mfa/%s' % art_id)
+        obj = {
+            'success': True,
+            'time_posted': new_annotation.date_posted
+        }
+        self.response.set_status(200)
+        self.response.headers['Content-Type'] = 'application/json'
+        self.response.out.write(json.dumps(obj))
+
+def serializeAnno(anno):
+    anno = anno.to_dict(exclude=['date_posted'])
+    # don't need key property in front -end, just change to id
+    # since json can't serialize keyproperties
+    anno['art_id'] = anno['art_id'].id()
+    anno['annotator'] = anno['annotator'].email()
+    return anno
 
 routes = [
     ('/', HomeHandler),
