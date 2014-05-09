@@ -4,3 +4,8 @@ indexes:
   properties:
   - name: art_id
   - name: date_posted
+
+- kind: Annotation
+  properties:
+  - name: annotator
+  - name: date_posted
