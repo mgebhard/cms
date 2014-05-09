@@ -1,0 +1,6 @@
+indexes:
+
+- kind: Annotation
+  properties:
+  - name: art_id
+  - name: date_posted

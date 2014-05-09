@@ -76,11 +76,9 @@ class HomeHandler(webapp2.RequestHandler):
 
         # If user exsists fetch their annotation
         usr_annotation = []
-        annotations = Annotation.query(Annotation.annotator==users.get_current_user()).fetch()
+        annotations = Annotation.query(Annotation.annotator==users.get_current_user()).order(Annotation.date_posted)
 
         art_keys = []
-
-        # annotations = Annotation.query().filter(Annotation.annotator==users.get_current_user())
         if annotations:
             for note in annotations:
                 if note.art_id not in art_keys:
@@ -95,13 +93,14 @@ class ArtHandler(webapp2.RequestHandler):
     def get(self, art_id):
         art_id = int(art_id)
         art = Art.get_by_id(int(art_id))
-        annotations = Annotation.query(Annotation.art_id==art.key).fetch()
+        annotations = Annotation.query(Annotation.art_id==art.key).order(Annotation.date_posted)
         all_annotations = []
         if annotations:
             for note in annotations:
                 all_annotations.append(note)
 
-        template_values = {'art_src': art.src,
+        template_values = {
+                           'art_src': art.src,
                            'title': art.title,
                            'artist': art.artist,
                            'exhibit': art.exhibit,
