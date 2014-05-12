@@ -12,20 +12,6 @@
 </head>
 
 <body class="pure-skin-red">
-  <div id="header" class="grid">
-    {% block header %}
-    <div id="header-title-div" class="grid-cell u2-3">
-      {% block header_title %}
-      <span class="page-title">{{ self.title() }}</span>
-      {% endblock header_title %}
-    </div>
-    <div id="header-button-div" class="grid-cell u1-3">
-      {% block header_button %}
-      {% endblock header_button %}
-    </div>
-    {% endblock header %}
-  </div>
-  
   <div id='content'>
     {% block content %}
     
