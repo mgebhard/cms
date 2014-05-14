@@ -1,7 +1,7 @@
 var NEW_COMMENT;
 
 anno.setProperties({
-    fill: "rgba(243, 40, 55, 0.69)"
+    fill: "rgba(243, 40, 55, 0.49)"
 });
 
 window.blockMenuHeaderScroll = false;
@@ -68,6 +68,21 @@ jQuery(document).ready(function($) {
 
         anno.showAnnotations();
         anno.showSelectionWidget();
+    });
+
+    $('.show-desc').click(function() {
+        $('.pic-desc').toggle();
+        var $txt = $('.show-desc-txt');
+        var $icon = $('.show-desc-icon');
+        if ($txt.text().trim() === 'Show Description') {
+            $txt.text('Hide Description');
+            $icon.removeClass('fa-chevron-right');
+            $icon.addClass('fa-chevron-down', '');
+        } else {
+            $txt.text('Show Description');
+            $icon.removeClass('fa-chevron-down');
+            $icon.addClass('fa-chevron-right', '');
+        }
     });
 
     $('.hide-comments').click(function() {

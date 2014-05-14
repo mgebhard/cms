@@ -2,7 +2,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 300px; }
+  max-height: 300px; }
 
 .art-image {
   flex: 1 1 auto;
@@ -17,9 +17,9 @@
 .new-show-buttons {
   flex-wrap: wrap; }
   .new-show-buttons button {
-    max-width: 40%; }
+    max-width: 42%; }
     .new-show-buttons button:first-child {
-      margin: 0 2em 0 0; }
+      margin: 0 1em 0 0; }
   .new-show-buttons .hide-comments {
     display: none; }
   .new-show-buttons .show-comment-how {
@@ -73,5 +73,16 @@
     margin: 0; }
   .art-comment-header .go-back-btn {
     font-size: 80%; }
+
+.art-info {
+  text-align: center; }
+  .art-info .pic-desc {
+    display: none;
+    font-size: .8em;
+    color: gray; }
+  .art-info .show-desc {
+    margin: 0; }
+  .art-info .pic-exhibit {
+    color: #333; }
 
 /*# sourceMappingURL=picture.css.map */

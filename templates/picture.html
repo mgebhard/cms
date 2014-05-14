@@ -7,6 +7,7 @@
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/forms-min.css">
 <link rel="stylesheet" href="../css/vendor/annotorious.css">
 <link rel="stylesheet" href="../css/picture.css">
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
 {% endblock %}
 
 {% block header_title %}
@@ -20,7 +21,16 @@
 
 {% block content %}
 <section class="art-info">
+  <p class="show-desc">
+    <i class="fa fa-chevron-right show-desc-icon"></i>
+    <span class="show-desc-txt">Show Description</span>
+  </p>
+  <div class="pic-desc">
+    <p class="pic-exhibit">{{exhibit}}</p>
+    {{ description }}
+  </div>
 </section>
+
 <div class="grid image-container">
   <img class="art-image grid-cell annotatable" src="{{ art_src }}" alt="{{ title }}">
 </div>
@@ -48,6 +58,8 @@
     </fieldset>
   </form>
 </div>
+
+
 
 <div class="grid bottom-content show-comment-div">
   <div class="grid art-comment-header">
