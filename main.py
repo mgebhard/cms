@@ -132,6 +132,11 @@ class ArtHandler(webapp2.RequestHandler):
                                     )
         new_annotation.put()
         # self.redirect('/mfa/%s' % art_id)
+        try:
+          _origin = self.request.headers['Origin']
+        except:
+          _origin = "*"
+        print _origin
         obj = {
             'success': True,
             'time_posted': new_annotation.date_posted.strftime('%m/%d/%Y - %H:%M')

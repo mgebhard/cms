@@ -574,10 +574,11 @@ ul.templatemo-project-gallery  li  a img:hover {
 		width: 11%;
 	}
   .pic-title {
-    font-size: .7em;
+    font-size: .4em;
+    line-height: 1;
   }
   .pic-artist {
-    font-size: .7em;
+    font-size: .4em;
   }
 }
 
