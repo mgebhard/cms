@@ -1,63 +1,29 @@
 {% extends "base.html" %}
 
+{% block title %}{{ title }}{% endblock %}
+
 {% block head %}
 {{ super() }}
 <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.4.2/forms-min.css">
 <link rel="stylesheet" href="../css/vendor/annotorious.css">
 <link rel="stylesheet" href="../css/picture.css">
-<link rel="shortcut icon" href="../images/favicon.ico">
+{% endblock %}
 
-<link href="../css/bootstrap.css" rel='stylesheet' type='text/css'>
-<link href="../css/templatemo_style.css"  rel='stylesheet' type='text/css'>
+{% block header_title %}
+{{ super() }}
+<p class="artist">{{ artist }}</p>
+{% endblock %}
 
+{% block header_button %}
+<a class="pure-skin-red pure-button home-button" href="/">Profile</a>
 {% endblock %}
 
 {% block content %}
-<div class="templatemo-top-menu no-min-height">
-            <div class="container">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="container">
-                        <div class="navbar-header">
-                                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                </button>
-                                <a class="navbar-brand" href="http://www.artannotator.appspot.com" rel="nofollow">
-                                    <img class ='logo' src='../images/logo.jpg'>
-                                    <span class ='logo'>  MFA Art Annotator </span>
-                                </a>
-                        </div>
-                        <div class="navbar-collapse collapse" id="templatemo-nav-bar">
-                            <ul class="nav navbar-nav navbar-right" style="margin-top: 40px;">
-                                <li class="active"><a href="http://www.artannotator.appspot.com">HOME</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-</div>
-
-<div class="templatemo-welcome no-min-height" id="templatemo-welcome">
-    <div class="container">
-        <div class="templatemo-slogan no-margin text-center">
-            <span class="txt_darkgrey pic-title">{{ title }}: </span><span class="pic-artist txt_red">{{ artist }}</span>
-            <p class="txt_slogan pic-exhibit"><i><b> {{ exhibit }} </b></i></p>
-            <p class="show-desc">
-              <i class="fa fa-chevron-right show-desc-icon"></i><span class="show-desc-txt">Show Description</span>
-            </p>
-            <p class="txt_slogan pic-desc">{{ description }}</p>
-        </div>
-     </div>
-  </div>
-
+<section class="art-info">
+</section>
 <div class="grid image-container">
   <img class="art-image grid-cell annotatable" src="{{ art_src }}" alt="{{ title }}">
 </div>
-
-
-
 
 <div class="grid bottom-content new-show-buttons">
   <button class="grid-cell pure-skin-red pure-button pure-button-primary new-comment">New Comment</button>
@@ -121,13 +87,12 @@
 
 {% block scripts %}
 {{ super() }}
-<script src="../js/bootstrap.min.js"  type="text/javascript"></script>
 <!--<script type="text/javascript" src="../js/vendor/annotorious.min.js"></script>-->
 <script type="text/javascript">
     var annotationsJSON = {{annotations_json}};
 </script>
 <!-- <script type="text/javascript" src="../js/vendor/annotorious.min.js"></script> -->
-<script type="text/javascript" src="../js/vendor/annotorious.test.min.js"></script>
+<script type="text/javascript" src="../js/vendor/annotorious.test.min.js">
 <script type="text/javascript" src="../js/vendor/anno-fancybox.min.js"></script>
 <script type="text/javascript" src="../js/anno-mob.js"></script>
 <script type="text/javascript" src="../js/picture.js"></script>

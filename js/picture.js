@@ -79,21 +79,6 @@ jQuery(document).ready(function($) {
         anno.hideSelectionWidget();
     });
 
-    $('.show-desc').click(function() {
-        $('.pic-desc').toggle();
-        var $txt = $('.show-desc-txt');
-        var $icon = $('.show-desc-icon');
-        if ($txt.text().trim() === 'Show Description') {
-            $txt.text('Hide Description');
-            $icon.removeClass('fa-chevron-right');
-            $icon.addClass('fa-chevron-down', '');
-        } else {
-            $txt.text('Show Description');
-            $icon.removeClass('fa-chevron-down');
-            $icon.addClass('fa-chevron-right', '');
-        }
-    });
-
     $('.new-comment').click(function() {
         NEW_COMMENT = true;
         $(this).parent().hide();

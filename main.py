@@ -27,6 +27,7 @@ class Art(ndb.Model):
     artist = ndb.StringProperty(required=True)
     exhibit = ndb.StringProperty(required=True)
     description = ndb.TextProperty(required=False)
+    link = ndb.StringProperty(required=True)
 
 class Annotation(ndb.Model):
     art_id = ndb.KeyProperty(kind=Art)
@@ -43,17 +44,18 @@ class Annotation(ndb.Model):
     center_y = ndb.FloatProperty(required=True)
 
 def dump_data():
-     with open("data2.json") as json_file:
+     with open("data.json") as json_file:
          json_data = json.load(json_file)['results']['collection1']
      for d in json_data:
-         src = d['image']
-         # link = d['period']['href']
+         src = d['image']['src']
+         link = d['period']['href']
          title = d['title']
          artist = d['artist']
          ex = d['exhibit']
          info = d['desc']
          # text = d['period']['text']
          new_art = Art(src = src,
+                         link = link,
                          title = title,
                          artist = artist,
                          exhibit = ex,
@@ -62,7 +64,6 @@ def dump_data():
 
 class HomeHandler(webapp2.RequestHandler):
     def get(self):
-        # dump_data()
         # check to see if the user is a new user
         current_user = users.get_current_user()
         userData = getUser(current_user)
@@ -71,7 +72,7 @@ class HomeHandler(webapp2.RequestHandler):
         if not userData:
             userData = Account(user=current_user)
             userData.put()
-            self.response.out.write(RenderTemplate('index.html', {}))
+            self.response.out.write(RenderTemplate('home.html', {}))
 
         # If user exsists fetch their annotation
         usr_annotation = []
@@ -84,7 +85,7 @@ class HomeHandler(webapp2.RequestHandler):
                     art_keys.append(note.art_id)
                 usr_annotation.append(note)
 
-        self.response.out.write(RenderTemplate('index.html', {'annotationList': usr_annotation,
+        self.response.out.write(RenderTemplate('home.html', {'annotationList': usr_annotation,
                                                              'artList': [key.get() for key in art_keys]}))
 
 
@@ -103,14 +104,15 @@ class ArtHandler(webapp2.RequestHandler):
                            'title': art.title,
                            'artist': art.artist,
                            'exhibit': art.exhibit,
+                           'link': art.link,
                            'description': art.description,
                            'all_annotations': all_annotations,
                            'annotations_json': json.dumps([serializeAnno(x) for x in all_annotations]), #Needed for Javascript function to readd annotations
                            'user': users.get_current_user(),
                            'art_id': art_id
                            }
-        self.response.headers.add_header("Access-Control-Allow-Origin", "*")
-        self.response.out.write(RenderTemplate('picture2.html' , template_values))
+
+        self.response.out.write(RenderTemplate('picture.html' , template_values))
 
     def post(self, art_id):
         art = Art.get_by_id(int(art_id))
@@ -132,17 +134,11 @@ class ArtHandler(webapp2.RequestHandler):
                                     )
         new_annotation.put()
         # self.redirect('/mfa/%s' % art_id)
-        try:
-          _origin = self.request.headers['Origin']
-        except:
-          _origin = "*"
-        print _origin
         obj = {
             'success': True,
             'time_posted': new_annotation.date_posted.strftime('%m/%d/%Y - %H:%M')
         }
         self.response.set_status(200)
-        self.response.headers["Access-Control-Allow-Origin"] = "*"
         self.response.headers['Content-Type'] = 'application/json'
         self.response.out.write(json.dumps(obj))
 

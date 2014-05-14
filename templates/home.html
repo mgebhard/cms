@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block title %}My Annotations{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="../css/home.css">
+{% endblock %}
+
+{% block header_button %}
+<button class="pure-skin-red pure-button">Logout</button>
+{% endblock %}
+
+{% block header_title %}
+{{ super() }}
+<p class="artist">Click on a section to navigate</p>
+{% endblock %}
+
+{% block content %}
+
+{% for art in artList %}
+<div class="picture-div grid" data-id="{{art.key.id()}}">
+  <div class="picture u1-3 grid">
+    <img class="picture-img" src="{{art.src}}">
+  </div>
+
+  <div class="info u2-3">
+    <h3>{{art.title}}</h3>
+    <p>{{art.artist}}</p>
+    <p>{{art.exhibit}}</p>
+  </div>
+</div>
+{% endfor %}
+
+{% if artList|length == 0 %}
+<p style="text-align: center;">
+  You haven't annotated anything yet. What are you waiting for?
+</p>
+{% endif %}
+
+{% endblock content %}
+
+{% block scripts %}
+{{super()}}
+<script type="text/javascript" src="../js/home.js"></script>
+{% endblock scripts %}
