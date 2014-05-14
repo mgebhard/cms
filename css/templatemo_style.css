@@ -576,7 +576,9 @@ ul.templatemo-project-gallery  li  a img:hover {
   .pic-title {
     font-size: .7em;
   }
-  .
+  .pic-artist {
+    font-size: .7em;
+  }
 }
 
 .show-desc {
