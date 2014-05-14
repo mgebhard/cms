@@ -109,7 +109,7 @@ class ArtHandler(webapp2.RequestHandler):
                            'user': users.get_current_user(),
                            'art_id': art_id
                            }
-
+        self.response.headers.add_header("Access-Control-Allow-Origin", "*")
         self.response.out.write(RenderTemplate('picture2.html' , template_values))
 
     def post(self, art_id):
@@ -137,7 +137,7 @@ class ArtHandler(webapp2.RequestHandler):
             'time_posted': new_annotation.date_posted.strftime('%m/%d/%Y - %H:%M')
         }
         self.response.set_status(200)
-        self.response.headers["Access-Control-Allow-Origin"] = "*" 
+        self.response.headers["Access-Control-Allow-Origin"] = "*"
         self.response.headers['Content-Type'] = 'application/json'
         self.response.out.write(json.dumps(obj))
 
