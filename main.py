@@ -27,7 +27,6 @@ class Art(ndb.Model):
     artist = ndb.StringProperty(required=True)
     exhibit = ndb.StringProperty(required=True)
     description = ndb.TextProperty(required=False)
-    link = ndb.StringProperty(required=True)
 
 class Annotation(ndb.Model):
     art_id = ndb.KeyProperty(kind=Art)
@@ -55,7 +54,6 @@ def dump_data():
          info = d['desc']
          # text = d['period']['text']
          new_art = Art(src = src,
-                         link = link,
                          title = title,
                          artist = artist,
                          exhibit = ex,
@@ -104,7 +102,6 @@ class ArtHandler(webapp2.RequestHandler):
                            'title': art.title,
                            'artist': art.artist,
                            'exhibit': art.exhibit,
-                           'link': art.link,
                            'description': art.description,
                            'all_annotations': all_annotations,
                            'annotations_json': json.dumps([serializeAnno(x) for x in all_annotations]), #Needed for Javascript function to readd annotations
