@@ -36,7 +36,7 @@
                         </div>
                     </div>
                 </div>
-            </div> 
+            </div>
 </div>
 
 <div class="grid image-container">
@@ -44,13 +44,16 @@
 </div>
 
 
-<div class="templatemo-welcome" id="templatemo-welcome">
+<div class="templatemo-welcome no-min-height" id="templatemo-welcome">
     <div class="container">
-        <div class="templatemo-slogan text-center">
-            <span class="txt_darkgrey">{{ title }}: </span><span class="txt_red">{{ artist }}</span>
-            <p class="txt_slogan"><i><b> {{ exhibit }} </b></i></p>
-            <p class="txt_slogan">{{ description }}</p>
-        </div>  
+        <div class="templatemo-slogan no-margin text-center">
+            <span class="txt_darkgrey pic-title">{{ title }}: </span><span class="pic-artist txt_red">{{ artist }}</span>
+            <p class="txt_slogan pic-exhibit"><i><b> {{ exhibit }} </b></i></p>
+            <p class="show-desc">
+              <i class="fa fa-chevron-right show-desc-icon"></i><span class="show-desc-txt">Show Description</span>
+            </p>
+            <p class="txt_slogan pic-desc">{{ description }}</p>
+        </div>
      </div>
   </div>
 
