@@ -13,7 +13,7 @@
 {% endblock %}
 
 {% block content %}
-<div class="templatemo-top-menu">
+<div class="templatemo-top-menu no-min-height">
             <div class="container">
                 <div class="navbar navbar-default" role="navigation">
                     <div class="container">
@@ -39,11 +39,6 @@
             </div>
 </div>
 
-<div class="grid image-container">
-  <img class="art-image grid-cell annotatable" src="{{ art_src }}" alt="{{ title }}">
-</div>
-
-
 <div class="templatemo-welcome no-min-height" id="templatemo-welcome">
     <div class="container">
         <div class="templatemo-slogan no-margin text-center">
@@ -56,6 +51,11 @@
         </div>
      </div>
   </div>
+
+<div class="grid image-container">
+  <img class="art-image grid-cell annotatable" src="{{ art_src }}" alt="{{ title }}">
+</div>
+
 
 
 
